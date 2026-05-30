@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class FRQ1
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        String original = input.nextLine();
+        System.out.println("Original: " + original);
+        int asterik1 = original.indexOf("*");
+        String word1 = original.substring(0, asterik1);
+        String original2 = original.substring(asterik1 + 1);
+        int asterik2 = original2.indexOf("*");
+        String word2 = original2.substring(0, asterik2);
+        String original3 = original2.substring(asterik2 + 1);
+        int asterik3 = original3.indexOf("*");
+        String word3 = original3.substring(0, asterik3);
+        String word4 = original3.substring(asterik3 + 1);
+        
+        System.out.println("Reverse: " + word4 + " " + word3 + " " + word2 + " " + word1);
+    }
+}
