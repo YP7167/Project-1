@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class MadLibs 
+{
+       public static void main(String[] args) {
+             // Template for the story
+             
+             Scanner input = new Scanner(System.in);
+             
+             System.out.print("Enter an adjective: ");
+             String adj1 = input.nextLine();
+             System.out.print("Enter a noun: ");
+             String noun1 = input.nextLine();
+             System.out.print("Enter a verb: ");
+             String verb1 = input.nextLine();
+             System.out.print("Enter a noun: ");
+             String noun2 = input.nextLine();
+             System.out.print("Enter an adjective: ");
+             String adj2 = input.nextLine();
+             System.out.print("Enter a noun: ");
+             String noun3 = input.nextLine();
+             System.out.println("________________________________________________");
+             System.out.println(" ");
+            String storyTemplate = "In a magical world far away, there was a " + adj1 + " " + noun1 + " " + "who lived to 1000 years old and loved to " + verb1 + " "  + "all day long. One day, while practicing their spells, the " + noun2 + " met a " + adj2 + " " + noun3 + " " + "and they fought to the death.";
+             // Display the template
+             System.out.println("Story of the duel in another world : ");
+       	    System.out.println(storyTemplate);
+        }
+    }
