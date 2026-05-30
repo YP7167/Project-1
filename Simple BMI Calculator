@@ -1,0 +1,7 @@
+w = int(input("Weight? "))
+h = int(input("Height? (inches) "))
+BMI_step_1 = 703 * w
+bmi_step_2 = h * h
+bmi_step_3 = BMI_step_1 / bmi_step_2
+
+print(bmi_step_3)
