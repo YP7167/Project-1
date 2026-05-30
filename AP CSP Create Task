@@ -1,0 +1,225 @@
+print("                             Welcome User")
+print("                 ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+print(" ")
+print("This program is designed to help you identify a body within outer space.")
+print("The program will ask you questions regarding what you wish to identify.")
+print("Once it is finished, the program will provide a guess for your object.")
+print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+
+#The code above gives instructions and greets the user.
+    
+characteristics = []
+
+#The code above creates a list
+
+#The code below defines a procedure that evaluates the list.
+
+def decision():
+    if characteristics[0] =="light" and characteristics[1] =="rocky":
+        print("Your object is a terrestial planet")
+    elif characteristics[0] =="medium" and characteristics[1] =="gassy":
+        print("Your object is a gas giant!")
+    elif characteristics[0] =="medium" and characteristics[1] =="rocky":
+        print("Your object is a very large terrestial planet.")
+    elif characteristics[0] =="large" and characteristics[1] =="rocky":
+        print("Your object doesn't exist.")
+    elif characteristics[0] =="very_large" and characteristics[1] =="rocky":
+        print("Your object doesn't exist.")
+    elif characteristics[0] =="massive" and characteristics[1] =="rocky":
+        print("Your object doesn't exist.")
+    elif characteristics[0] =="gigantic" and characteristics[1] =="rocky":
+        print("Your object doesn't exist.")
+    elif characteristics[0] =="light" and characteristics[1] =="gassy":
+        print("Your object is a very small gas giant.")
+    elif characteristics[0] =="large" and characteristics[1] =="gassy":
+        print("Your object is a star.")
+    elif characteristics[0] =="very_large" and characteristics[1] =="gassy":
+        print("Your object is a very large star.")
+    elif characteristics[0] =="massive" and characteristics[1] =="gassy":
+        print("Your object is a large nebula.")
+    elif characteristics[0] =="gigantic" and characteristics[1] =="gassy":
+        print("Your object is an extremely large nebula.")
+    elif characteristics[0] =="light" and characteristics[1] =="dense":
+        print("Your object does not exist.")
+    elif characteristics[0] =="medium" and characteristics[1] =="dense":
+        print("Your object does not exist.")
+    elif characteristics[0] =="large" and characteristics[1] =="dense":
+        print("Your object is a stellar black hole.")
+    elif characteristics[0] =="very_large" and characteristics[1] =="dense":
+        print("Your object is a stellar black hole.")
+    elif characteristics[0] =="massive" and characteristics[1] =="dense":
+        print("Your object is a theoretical intermediate-mass black hole.")
+    elif characteristics[0] =="gigantic" and characteristics[1] =="dense":
+        print("Your object is a super-massive black hole.")
+    elif characteristics[0] =="light" and characteristics[1] =="neutrons":
+        print("Your object does not exist.")
+    elif characteristics[0] =="medium" and characteristics[1] =="neutrons":
+        print("Your object does not exist.")
+    elif characteristics[0] =="large" and characteristics[1] =="neutrons":
+        print("Your object is a neutron star.")
+    elif characteristics[0] =="very_large" and characteristics[1] =="neutrons":
+        print("Your object is a very massive neutron star.")
+    elif characteristics[0] =="massive" and characteristics[1] =="neutrons":
+        print("Your object does not exist.")
+    elif characteristics[0] =="gigantic" and characteristics[1] =="neutrons":
+        print("Your object does not exist.")
+    print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+    
+    #The code below defines a procedure regarding the input of composition.
+    
+def select_composition(composition):
+    if composition =="rock":
+        characteristics.append("rocky")
+    elif composition =="gas":
+        characteristics.append("gassy")
+    elif composition =="dense matter":
+        characteristics.append("dense")
+    elif composition =="neutrons":
+        characteristics.append("neutrons")
+    elif composition =="Rock":
+        characteristics.append("rocky")
+    elif composition =="Gas":
+        characteristics.append("gassy")
+    elif composition =="Dense matter":
+        characteristics.append("dense")
+    elif composition =="Neutrons":
+        characteristics.append("neutrons")
+    elif composition =="Dense Matter":    
+        characteristics.append("dense")
+    else:
+        print("Please enter one of the options.")
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+        composition = str(input("Alright, what is your object mostly made out of? [Gas, Rock, Dense matter, Neutrons]: "))
+        if composition =="rock":
+            characteristics.append("rocky")
+        elif composition =="gas":
+            characteristics.append("gassy")
+        elif composition =="dense matter":
+            characteristics.append("dense")
+        elif composition =="neutrons":
+            characteristics.append("neutrons")
+        elif composition =="Rock":
+            characteristics.append("rocky")
+        elif composition =="Gas":
+            characteristics.append("gassy")
+        elif composition =="Dense matter":
+            characteristics.append("dense")
+        elif composition =="Neutrons":
+            characteristics.append("neutrons")
+        elif composition =="Dense Matter":
+            characteristics.append("dense")
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+        
+        #The procedure below takes in input from the user for mass
+        
+def select_mass():
+    try:
+        mass = float(input("To begin, how many solar masses (mass of the sun) is your object? "))
+        if mass <= 0.000003:
+            characteristics.append("light")
+        elif 0.9 >= mass >= 0.000003:
+            characteristics.append("medium")
+        elif 99 >= mass >= 0.9:
+            characteristics.append("large")
+        elif 500 >= mass >= 99:
+            characteristics.append("very_large")
+        elif 99999 >= mass >= 500:
+            characteristics.append("massive")
+        elif mass >= 100000:
+            characteristics.append("gigantic")
+    except:
+        print("Sorry, you must enter a number for this.")
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+        mass = float(input("How many solar masses is your object? "))
+        if mass <= 0.000003:
+            characteristics.append("light")
+        elif 0.9 >= mass >= 0.000003:
+            characteristics.append("medium")
+        elif 99 >= mass >= 0.9:
+            characteristics.append("large")
+        elif 500 >= mass >= 99:
+            characteristics.append("very_large")
+        elif 99999 >= mass >= 500:
+            characteristics.append("massive")
+        elif mass >= 100000:
+            characteristics.append("gigantic")
+    print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+    
+    #The code above defines a function regarding the input to mass.
+    
+    #The procedure below is the main one that takes in input with a parameter.
+
+def identify_phenomena(characteristics):
+    try:
+        mass = float(input("To begin, how many solar masses (mass of the sun) is your object? "))
+        if mass <= 0.000003:
+            characteristics.append("light")
+        elif 0.9 >= mass >= 0.000003:
+            characteristics.append("medium")
+        elif 99 >= mass >= 0.9:
+            characteristics.append("large")
+        elif 500 >= mass >= 99:
+            characteristics.append("very_large")
+        elif 99999 >= mass >= 500:
+            characteristics.append("massive")
+        elif mass >= 100000:
+            characteristics.append("gigantic")
+    except:
+        print("Sorry, you must enter a number for this.")
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+        mass = float(input("How many solar masses is your object? "))
+        if mass <= 0.000003:
+            characteristics.append("light")
+        elif 0.9 >= mass >= 0.000003:
+            characteristics.append("medium")
+        elif 99 >= mass >= 0.9:
+            characteristics.append("large")
+        elif 500 >= mass >= 99:
+            characteristics.append("very_large")
+        elif 99999 >= mass >= 500:
+            characteristics.append("massive")
+        elif mass >= 100000:
+            characteristics.append("gigantic")
+    print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+
+    composition = str(input("Alright, what is your object mostly made out of? [Gas, Rock, Dense matter, Neutrons]: "))
+    select_composition(composition)
+    decision()
+    while True:
+        play_again = input("Would you like to play again? ")
+        break
+    if play_again =="Yes":
+        characteristics.clear()
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+        identify_phenomena(characteristics)
+    elif play_again =="yes":
+        characteristics.clear()
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+        identify_phenomena(characteristics)
+    elif play_again =="No":
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+        print("Thank you for playing!")
+    elif play_again =="no":
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+        print("Thank you for playing!")
+    else:
+        print("Please enter Yes or No.")
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+        while True:
+            play_again = input("Would you like to play again? ")
+            break
+        if play_again =="Yes":
+            characteristics.clear()
+            print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+            identify_phenomena(characteristics)
+        elif play_again =="yes":
+            characteristics.clear()
+            print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+            identify_phenomena(characteristics)
+        elif play_again =="No":
+            print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+            print("Thank you for playing!")
+        elif play_again =="no":
+            print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+            print("Thank you for playing!")
+identify_phenomena(characteristics)
