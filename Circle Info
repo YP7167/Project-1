@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class RoundThingsDriver
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the radius : ");
+        double radius = input.nextDouble();
+        double area = RoundThings.calcAreaCircle(radius);
+        double circumference = RoundThings.calcCircumCircle(radius);
+        double surfaceArea = RoundThings.calcAreaSphere(radius);
+        double volume = RoundThings.calcVolumeSphere(radius);
+    
+        System.out.println("The area of a circle with a radius of " + radius + " is " + area);
+        System.out.println("The volume of a sphere with a radius of " + radius + " is " + volume);
+        System.out.println("The circumference of a circle with a radius of " + radius + " is " + circumference);
+        System.out.println("The surface area of a sphere with a radius of " + radius + " is " + surfaceArea);
+    }
+}
+
+
+
+
+
+
+
+
+
+
