@@ -1,0 +1,74 @@
+/**
+ * Receipt3.java  
+ *
+ * @author – Your name
+ * @author – Class period
+ */ 
+public class Receipt3
+{
+   public static void main(String [] args)
+   {
+       
+      
+      String highSchoolName = "Grayson HS";
+      String itemName1 = "Drink";
+      String itemName2 = "Candy";
+      String itemName3 = "Hot Dog";
+      String itemName4 = "Hamburger";
+      int orderNum = (int)(Math.random() * 101 + 1);
+      int numOfDrinks = (int)(Math.random() * 3);
+      int numOfCandy = (int)(Math.random() * 3);
+      int numOfHotdog = (int)(Math.random() * 3);
+      int numOfHamburger = (int)(Math.random() * 3);
+      
+      
+      
+      double drink = 1.50;
+      double candy = 1.25;
+      double hotDog = 2.75;
+      double hamburger = 3.50;
+      
+      double priceDrink = numOfDrinks * drink;
+      double priceCandy = numOfCandy * candy;
+      double priceHotdog = numOfHotdog * hotDog;
+      double priceHamburger = numOfHamburger * hamburger;
+      double subtotal = priceDrink + priceCandy + priceHotdog + priceHamburger;
+      
+      double taxRate = 0.049;
+      double tax = subtotal * taxRate;
+      tax = ((int)(tax * 100)/100.0);
+      double totalPrice = tax + subtotal;
+     
+      
+      System.out.println("**************************************");
+      System.out.println("*                                    *");
+      System.out.println("*     " + highSchoolName + " Snack Bar           *");
+      System.out.println("*                                    *");
+      System.out.println("*     " + itemName1 + "..............$" + drink +"0       *");               
+      System.out.println("*     " + itemName2 + "..............$" + candy +"       *");     
+      System.out.println("*     " + itemName3 + "..............$" + hotDog +"     *");     
+      System.out.println("*     " + itemName4 + "..............$" + hamburger +"    *");      
+      System.out.println("*                                    *");    
+      System.out.println("**************************************");
+      System.out.println("*                                    *");
+      System.out.println("* Order Number" + " " + orderNum + "                    *");
+      System.out.println("*                                    *");
+      System.out.println("* QTY     ITEM     TOTAL             *");
+      System.out.println("**************************************");
+      System.out.println("                                     ");
+      System.out.println("   " + numOfDrinks + "      " + itemName1 + "     " + priceDrink + "              ");
+      System.out.println("                                      ");
+      System.out.println("   " + numOfCandy + "      " + itemName2 + "     " + priceCandy + "              ");
+      System.out.println("                                      ");
+      System.out.println("   " + numOfHotdog + "      " + itemName3 + "    " + priceHotdog + "            ");
+      System.out.println("                                      ");
+      System.out.println("   " + numOfHamburger + "      " + itemName4 + "  " + priceHamburger + "           ");
+      System.out.println("**************************************");
+      System.out.println(" ");
+      System.out.println("   Subtotal        " + subtotal );
+      System.out.println(" ");
+      System.out.println("   Tax             " + tax );
+      System.out.println(" ");
+      System.out.println("   Total           " + totalPrice);
+   }
+}
