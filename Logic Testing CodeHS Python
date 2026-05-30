@@ -1,0 +1,106 @@
+
+for i in range(4):
+    if front_is_clear():
+        move()
+        put_ball()
+        if front_is_clear():
+            move()
+        else: 
+            turn_left()
+for i in range(4):          
+    if facing_north():
+        move()
+        if front_is_clear():
+            move()
+            put_ball()
+        else:
+            turn_left()
+for i in range(4):
+    if facing_west():
+        move()
+        put_ball()
+    if front_is_clear():
+        move()
+    else:
+        turn_left()
+for i in range(3):
+    if facing_south():
+        move()
+        if front_is_clear():
+            move()
+            put_ball()
+turn_left()
+for i in range(3):
+    if facing_east():
+        move()
+        if front_is_clear():
+            move()
+            put_ball()
+turn_left()
+for i in range(2):
+    if facing_north():
+        move()
+        if front_is_clear():
+            move()
+            put_ball()
+move()
+turn_left()
+for i in range(2):
+    if facing_west():
+        move()
+        put_ball()
+    if front_is_clear():
+        move()
+move()
+turn_left()
+for i in range(2):
+    if facing_south():
+        put_ball()
+        move()
+    if front_is_clear():
+        move()
+turn_left()
+put_ball()
+for i in range(2):
+    if facing_east():
+        move()
+        move()
+        if no_balls_present():
+            put_ball()
+        else:
+            move()
+turn_left()
+move()
+move()
+if no_balls_present():
+    put_ball()
+else:
+    move()
+move()
+turn_left()
+move()
+
+if no_balls_present():
+    put_ball()
+    move()
+else:
+    move()
+move()
+turn_left()
+if no_balls_present():
+    put_ball()
+else:
+    move()
+move()
+move()
+put_ball()
+turn_left()
+move()
+move()
+put_ball()
+turn_left()
+move()
+turn_left()
+move()
+put_ball()
+turn_around()
