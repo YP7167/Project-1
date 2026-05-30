@@ -1,0 +1,25 @@
+#Gets the total number of days that the temperatures take place in.
+
+number_of_days = int(input("Enter the number of days: "))
+if number_of_days <= 0:
+    print("Please enter a positive integer for the number of days.")
+
+
+#Creates an empty list that the temperatures will go in
+
+temperatures = [ ]
+
+
+#This takes the number of days from before and asks the user for the temperature on each day.
+
+for i in range(1, number_of_days + 1):
+    temps = int(input("Enter the temperature for day" + " " + str(i) + ": " ))
+    temperatures.append(temps)
+    
+#Above, the temperatures that the user entered get appended to the empty list from before.
+
+
+#This calculates the average of all the temps from the x amount of days.
+    
+average_of_temps = sum(temperatures) / len(temperatures)
+print("The average temperature for the " + str(number_of_days) + " " + "days is: " + str(average_of_temps))
