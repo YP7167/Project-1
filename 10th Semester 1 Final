@@ -1,0 +1,71 @@
+import random
+
+energy = 10
+hunger = 5
+max_hunger = 15
+min_energy = 0
+print("Welcome to Pet Care")
+print("Pet care is an interactive program that will allow you to take care of a pet!")
+print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+print("The following are options that you can use to interact with your pet : ")
+print("A. Feed")
+print("B. Play")
+print("C. Rest")
+print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+
+#The code above assigns numbers that set a guideline for the pet's stats and also gives the user possible options.
+#The code below gives all the possible options that the user can do and gives a result when the user types what they wish to do.
+
+while True:
+    feeling = random.choice(("hungry.", "playful.", "tired."))
+    print("Your pet is feeling " + str(feeling))
+    
+    option = input("Enter the letter you wish to do :  ")
+    if option == "A" :
+        print("You feed your pet and his hunger decreases!")
+        if hunger > 0 :
+            hunger = hunger - random.randint(1, 4)
+        reaction = random.choice(("happier.", "hungrier.", "tired."))
+        print("Your pet became " + str(reaction))
+        print("Your pet's hunger is currently : " + str(hunger))
+        print("Your pet's energy is currently : " + str(energy))
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+    elif option == "B" :
+        print("You play with your pet and he becomes happy")
+        print("However, he is now hungry and tired")
+        if energy > 0 :
+            energy = energy - random.randint(1, 4)
+        if hunger > 0 :
+            hunger = hunger + random.randint(1, 4)
+        reaction = random.choice(("happier.", "hungrier.", "tired."))
+        print("Your pet became " + str(reaction))
+        print("Your pet's hunger is currently : " + str(hunger))
+        print("Your pet's energy is currently : " + str(energy))
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+    elif option == "C" :
+        print("You take your pet to its bed and put it to sleep")
+        print("His energy is restored")
+        if energy < 15 :
+            energy = energy + random.randint(1, 4)
+        reaction = random.choice(("happier.", "hungrier.", "tired."))
+        print("Your pet became " + str(reaction))
+        print("Your pet's hunger is currently : " + str(hunger))
+        print("Your pet's energy is currently : " + str(energy))
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+        
+    else:
+        print("Sorry, that is not a possible option.")
+        print("⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ⚝──⭒─⭑─⭒──⚝ ")
+        
+    if hunger < 0 :
+        print("Your fed your pet too much and he caused an earthquake taking itself out with your house.")
+        break
+        
+    if hunger >= max_hunger:
+            print("Your pet got too hungry, went to look for food and accidentally ate plutonium on the road =(")
+            break
+    if energy <= min_energy:
+            print("Your pet got too tired and died due to not being able to run away from the IRS =( ")
+            break
+        
+#The code above makes the "You lost!" screen for the game.
